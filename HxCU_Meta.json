@@ -1,0 +1,6 @@
+{
+    "libVersion": "1.8.0",
+    "haxeLibs": [],
+    "wiiuLibs": [""],
+    "mainDefines": []
+}

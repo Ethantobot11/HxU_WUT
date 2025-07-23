@@ -11,37 +11,44 @@ extern typedef Sa_family_t = UInt16;
 
 @:native("sockaddr")
 @:include("sys/socket.h")
-extern typedef Sockaddr = {
-    @:native("sa_family_t")
+@:valueType
+extern class Sockaddr = {
     @:include("sys/socket.h")
-	var sa_family:Sa_family_t;
+	public var sa_family:Sa_family_t;
 
-	@:native("sa_data")
     @:include("sys/socket.h")
-	var sa_data:Char;
+	public var sa_data:Char;
+
+    @:haxe.warning("-WExternWithExpr")
+    public function new() {}
 }
 
 @:native("sockaddr_storage")
 @:include("sys/socket.h")
+@:valueType
 extern typedef Sockaddr_storage = {
-    @:native("ss_family")
     @:include("sys/socket.h")
-    var ss_family:Sa_family_t;
+    public var ss_family:Sa_family_t;
 
-	@:native("ss_padding")
     @:include("sys/socket.h")
-	var ss_padding:Char;
+	public var ss_padding:Char;
+
+    @:haxe.warning("-WExternWithExpr")
+    public function new() {}
 }
 
 @:native("linger")
 @:include("sys/socket.h")
-extern typedef Linger = {
-    @:native("l_onoff")
+@:valueType
+extern class Linger = {
     @:include("sys/socket.h")
-	var l_onoff:Int;
+	public var l_onoff:Int;
 
-    @:native("l_linger")
-    var l_linger:Int;
+    @:include("sys/socket.h")
+    public var l_linger:Int;
+
+    @:haxe.warning("-WExternWithExpr")
+    public function new() {}
 }
 
 @:include("sys/socket.h")

@@ -49,17 +49,25 @@ extern enum MICInstance {
 
 @:native("MICWorkMemory")
 @:include("mic/mic.h")
-extern typedef MICWorkMemory = {
-    var sampleMaxCount:SizeT;
-    var sampleBuffer:VoidPtr;
+@:valueType
+extern class MICWorkMemory = {
+    public var sampleMaxCount:SizeT;
+    public var sampleBuffer:VoidPtr;
+
+    @:haxe.warning("-WExternWithExpr")
+    public function new() {}
 }
 
 @:native("MICStatus")
 @:include("mic/mic.h")
-extern typedef MICStatus = {
-    var state:Int;
-    var availableData:Int;
-    var bufferPos:Int;
+@:valueType
+extern class MICStatus = {
+    public var state:Int;
+    public var availableData:Int;
+    public var bufferPos:Int;
+
+    @:haxe.warning("-WExternWithExpr")
+    public function new() {}
 }
 
 @:cppInclude("mic/mic.h")

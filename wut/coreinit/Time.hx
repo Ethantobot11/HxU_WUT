@@ -12,17 +12,31 @@ extern typedef OSTime = Int64;
 
 @:include("coreinit/time.h")
 @:native("OSCalendarTime")
-extern typedef OSCalendarTime = {
-    var tm_sec:Int32;
-    var tm_min:Int32;
-    var tm_hour:Int32;
-    var tm_mday:Int32;
-    var tm_mon:Int32;
-    var tm_year:Int32;
-    var tm_wday:Int32;
-    var tm_yday:Int32;
-    var tm_msec:Int32;
-    var tm_usec:Int32;
+@:valueType
+extern class OSCalendarTime = {
+    @:include("coreinit/time.h")
+    public var tm_sec:Int32;
+    @:include("coreinit/time.h")
+    public var tm_min:Int32;
+    @:include("coreinit/time.h")
+    public var tm_hour:Int32;
+    @:include("coreinit/time.h")
+    public var tm_mday:Int32;
+    @:include("coreinit/time.h")
+    public var tm_mon:Int32;
+    @:include("coreinit/time.h")
+    public var tm_year:Int32;
+    @:include("coreinit/time.h")
+    public var tm_wday:Int32;
+    @:include("coreinit/time.h")
+    public var tm_yday:Int32;
+    @:include("coreinit/time.h")
+    public var tm_msec:Int32;
+    @:include("coreinit/time.h")
+    public var tm_usec:Int32;
+
+    @:haxe.warning("-WExternWithExpr")
+    public function new() {}
 }
 
 @:cppInclude("coreinit/time.h") 
