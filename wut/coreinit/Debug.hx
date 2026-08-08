@@ -1,5 +1,7 @@
 package wut.coreinit;
 
+import cxx.ConstCharPtr;
+
 @:cppInclude("coreinit/debug.h") @:include("coreinit/debug.h")
 @:native("DisassemblyPrintFn")
 extern typedef DisassemblyPrintFn = (fmt:ConstCharPtr) -> Void;
