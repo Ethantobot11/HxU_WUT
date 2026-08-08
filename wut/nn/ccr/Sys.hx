@@ -1,5 +1,7 @@
 package wut.nn.ccr;
 
+import cxx.num.*;
+
 @:cppInclude("nn/ccr/sys.h") @:include("nn/ccr/sys.h")
 
 @:include("nn/ccr/sys.h")
